@@ -1,0 +1,150 @@
+/* Remove default spacing from all elements
+   and make sizing easier to control.  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Main body styling  */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    min-height: 100vh;
+    /* Center the converter card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/* Main currency converter card  */
+.converter-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+/* Main heading  */
+h1 {
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+/* Description below heading  */
+.description {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+/* Common styling for input sections  */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+/* Labels above input fields  */
+label {
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: 8px;
+}
+/* Amount input and currency dropdown  */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+/* Change border color when user selects
+   an input field  */
+input:focus,
+select:focus {
+    border-color: #2563eb;
+}
+/* Put From and To sections side by side  */
+.currency-section {
+    display: flex;
+    gap: 15px;
+}
+/* Each currency input takes equal space  */
+.currency-section .input-group {
+    flex: 1;
+}
+/*  Convert button*/
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* Button hover effect  */
+button:hover {
+    background-color: #1d4ed8;
+}
+/* Status message*/
+.status-message {
+    text-align: center;
+    margin-top: 15px;
+    color: #dc2626;
+    min-height: 20px;
+}
+/* Result box*/
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #eff6ff;
+    border-radius: 10px;
+}
+/* Result box heading */
+.result-box p {
+    color: #64748b;
+    margin-bottom: 8px;
+}
+/* Converted amount */
+.result-box h2 {
+    color: #2563eb;
+    font-size: 32px;
+}
+/* Exchange rate information*/
+.rate-info {
+    text-align: center;
+    color: #475569;
+    margin-top: 15px;
+    font-size: 14px;
+}
+/* API attribution*/
+.api-credit {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+/* Link inside API attribution*/
+.api-credit a {
+    color: #2563eb;
+    text-decoration: none;
+}
+/* Responsive design for smaller screens*/
+@media (max-width: 600px) {
+    .converter-container {
+        padding: 25px;
+    }
+    .currency-section {
+        flex-direction: column;
+        gap: 0;
+    }
+    h1 {
+        font-size: 26px;
+    }
+}

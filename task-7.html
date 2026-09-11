@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the website responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title shown in the browser tab -->
+    <title>Currency Converter</title>
+    <!-- Connecting the CSS file -->
+    <link rel="stylesheet" href="task-7.css">
+</head>
+<body>
+    <!-- Main container of the currency converter -->
+    <main class="converter-container">
+        <!-- Page heading -->
+        <h1>Currency Converter</h1>
+        <!-- Short description -->
+        <p class="description">
+            Convert currencies using exchange rates from an API
+        </p>
+        <!-- Amount input section -->
+        <div class="input-group">
+            <label for="amount">Amount</label>
+            <input
+                type="number"
+                id="amount"
+                placeholder="Enter amount"
+                min="0"
+                step="any"
+            >
+        </div>
+        <!-- Currency selection section -->
+        <div class="currency-section">
+            <!-- From currency -->
+            <div class="input-group">
+                <label for="fromCurrency">From</label>
+                <select id="fromCurrency">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                </select>
+            </div>
+            <!-- To currency -->
+            <div class="input-group">
+                <label for="toCurrency">To</label>
+                <select id="toCurrency">
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                </select>
+            </div>
+        </div>
+        <!-- Convert button -->
+        <button id="convertButton">
+            Convert
+        </button>
+        <!-- Area where loading/error messages are displayed -->
+        <p id="statusMessage" class="status-message"></p>
+        <!-- Result section -->
+        <div class="result-box">
+            <p>Converted Amount</p>
+            <h2 id="result">
+                0.00
+            </h2>
+        </div>
+        <!-- Exchange rate information -->
+        <p id="rateInfo" class="rate-info">
+            Enter an amount and click Convert
+        </p>
+        <!-- API attribution required by the open endpoint -->
+        <p class="api-credit">
+            Exchange rates provided by
+            <a
+                href="https://www.exchangerate-api.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ExchangeRate-API
+            </a>
+        </p>
+    </main>
+    <!-- Connecting the JavaScript file -->
+    <script src="task-7.js"></script>
+</body>
+</html>
